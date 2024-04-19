@@ -1,0 +1,32 @@
+{%load static%}
+{%include 'layaut.html'%}
+{%block content%}
+<form action="{% url 'contraseña'%}">
+
+    <h1>generador de contraseña</h1>
+
+    <label for="length">seleciona para generar tu contraseña:</label>
+    <select name="length" id"length">
+        <option value="6">6 characters</option>
+        <option value="7">7 characters</option>
+        <option value="8">8 characters</option>
+        <option value="9">9 characters</option>
+        <option value="10">10 characters</option>
+        <option value="11">11 characters</option>
+        <option value="12">12 characters</option>
+        <option value="13">13 characters</option>
+        <option value="14">14 characters</option>
+    </select>
+
+    <label for="uppercase">uppercase</label>
+    <input type="checkbox" name="uppercase" id="uppercase">
+
+    <label for="especial">caracteres especiales</label>
+    <input type="checkbox" name="especial" id="especial">
+
+    <label for="numeros">numeros</label>
+    <input type="checkbox" name="numeros" id="numeros">
+
+    <button>genarar contraseña</button>
+</form>
+{%endblock%}
